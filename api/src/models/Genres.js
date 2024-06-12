@@ -5,13 +5,13 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Genres', {
     id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
+      type: DataTypes.INTEGER,
       primaryKey: true,
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      uniuqe: true,
     },
   });
 };
